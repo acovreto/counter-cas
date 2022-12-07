@@ -1,40 +1,65 @@
-const countdown = document.querySelector(".countdown");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(138, 235, 137);
+  position: relative;
+}
+.container {
+  display: flex;
 
-const interval = setInterval(() => {
-  const deadline = new Date(2022, 7, 15, 12, 00, 00);
-
-  const current = new Date();
-
-  const diff = deadline - current;
-
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24)) + "";
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24) + "";
-  const minutes = Math.floor((diff / (1000 * 60)) % 60) + "";
-  const seconds = Math.floor((diff / 1000) % 60) + "";
-
-  countdown.innerHTML = `
-    <div data-content="Days">${days.length === 1 ? `0${days}` : days}</div>
-    <div data-content="Hours">${hours.length === 1 ? `0${hours}` : hours}</div>
-    <div data-content="Minutes">${
-      minutes.length === 1 ? `0${minutes}` : minutes
-    }</div>
-    <div data-content="Seconds">${
-      seconds.length === 1 ? `0${seconds}` : seconds
-    }</div>
-`;
-
-  if (diff < 0) {
-    clearInterval(interval);
-    countdown.innerHTML = "<h1>Here We Go!!!</h1>";
-  }
-
-  document.querySelector(".reset").addEventListener("click", () => {
-    clearInterval(interval);
-
-    const divs = document.querySelectorAll(".countdown div");
-
-    divs.forEach((div) => {
-      div.innerHTML = "00";
-    });
-  });
-}, 1000);
+  background-color: rgb(138, 235, 137);
+}
+h1 {
+  font-size: 150px;
+}
+.min,
+.sec {
+  font-size: 150px;
+  background-color: rgb(6, 52, 15);
+  color: white;
+  padding: 20px;
+  margin-right: 50px;
+  border-radius: 15px;
+  box-shadow: 0.5rem 0.8rem 0.5rem rgba(6, 52, 15, 0.3);
+  letter-spacing: 10px;
+}
+.cas-pauza {
+  font-size: 80px;
+  color: rgb(6, 52, 15);
+  color: white;
+  text-shadow: 0.2rem 0.4rem 0.5rem rgba(6, 52, 15, 0.3);
+}
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+form {
+  position: relative;
+  z-index: 100;
+}
+form input {
+  margin-right: 10px;
+}
+form p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: rgb(6, 52, 15);
+}
+label {
+  color: rgb(6, 52, 15);
+}
+.hide {
+  display: none;
+}
