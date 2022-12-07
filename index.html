@@ -2,23 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Countdown</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
+    <title>Timer na skolski cas</title>
   </head>
   <body>
+    <form action="#">
+      <p>Селектирај должина на час:</p>
+      <input type="radio" id="age1" name="hourLength" value="0" />
+      <label for="age1">0 - 45 минути</label><br />
+      <input type="radio" id="age2" name="hourLength" value="5" />
+      <label for="age2">0 - 40 минути </label><br />
+      <input type="radio" id="age3" name="hourLength" value="10" />
+      <label for="age3">0 - 35 минути</label><br /><br />
+      <!-- <button type="submit">submit</button> -->
+    </form>
+    <h1 class="cas-pauza">cas <span>1</span></h1>
     <div class="container">
-      <div class="countdown-wrapper">
-        <h1>Coming Soon...</h1>
-        <div class="countdown"></div>
-        <button class="reset">Reset</button>
+      <div class="min-cont">
+        <!-- <h1>min</h1> -->
+        <h1 class="min">00</h1>
+      </div>
+
+      <div class="sec-cont">
+        <!-- <h1>sec</h1> -->
+        <h1 class="sec">00</h1>
       </div>
     </div>
-
+    <div class="frame"></div>
     <script src="script.js"></script>
   </body>
 </html>
+
