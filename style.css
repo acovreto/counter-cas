@@ -2,86 +2,64 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Baloo da 2", cursive;
 }
-
-html {
-  font-size: 62.5%;
+body {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(138, 235, 137);
+  position: relative;
 }
-
 .container {
+  display: flex;
+
+  background-color: rgb(138, 235, 137);
+}
+h1 {
+  font-size: 150px;
+}
+.min,
+.sec {
+  font-size: 150px;
+  background-color: rgb(6, 52, 15);
+  color: white;
+  padding: 20px;
+  margin-right: 50px;
+  border-radius: 15px;
+  box-shadow: 0.5rem 0.8rem 0.5rem rgba(6, 52, 15, 0.3);
+  letter-spacing: 10px;
+}
+.cas-pauza {
+  font-size: 80px;
+  color: rgb(6, 52, 15);
+  color: white;
+  text-shadow: 0.2rem 0.4rem 0.5rem rgba(6, 52, 15, 0.3);
+}
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #17181b;
+}
+form {
   position: relative;
+  z-index: 100;
 }
-
-.countdown-wrapper {
-  width: 100%;
-  position: absolute;
-  top: 15%;
-  text-align: center;
-  color: #ddd;
+form input {
+  margin-right: 10px;
 }
-
-.countdown-wrapper h1 {
-  font-size: 8rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin-bottom: 8rem;
-  text-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.5);
+form p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: rgb(6, 52, 15);
 }
-
-.countdown {
-  display: flex;
-  justify-content: center;
+label {
+  color: rgb(6, 52, 15);
 }
-
-.countdown div {
-  width: 13rem;
-  height: 13rem;
-  background: linear-gradient(
-    to bottom,
-    rgba(61, 58, 58, 0.9) 50%,
-    rgba(99, 93, 93, 0.9) 0
-  );
-  margin: 0 4rem 12rem 4rem;
-  font-size: 7rem;
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-
-.countdown div::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0.24rem;
-  background-color: #17181b;
-}
-
-.countdown div::after {
-  content: attr(data-content);
-  font-size: 2.2rem;
-  font-weight: 400;
-  position: absolute;
-  bottom: -6rem;
-}
-
-.reset {
-  width: 22rem;
-  height: 6rem;
-  border: none;
-  background-color: #a52a2a;
-  font-size: 2.2rem;
-  font-weight: 400;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  color: #eee;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
-  outline: none;
+.hide {
+  display: none;
 }
